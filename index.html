@@ -5,25 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>XV Isabella Vitória</title>
-    <!-- Fontes elegantes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Efeito de Neve Caindo -->
+
+    <!-- TELA DE ENTRADA: PORTAS DE GELO -->
+    <div id="ice-gate" class="gate-container">
+        <div class="gate-left"></div>
+        <div class="gate-right"></div>
+        <div class="gate-content">
+            <p class="gate-subtitle">VOCÊ FOI CONVIDADO</p>
+            <h2 class="gate-title">XV</h2>
+            <button class="btn-open" onclick="openGate()">Abrir Convite ❄️</button>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL (FICA ESCONDIDO ATRÁS DA PORTA) -->
     <div class="snow"></div>
+    <div class="sparkles"></div>
 
     <main class="card">
         <header>
-            <p class="subtitle">CONVITE ESPECIAL</p>
+            <p class="subtitle">CONVITE DE 15 ANOS</p>
             <div class="divider">❄️</div>
             <h1>Isabella Vitória</h1>
             <p class="tagline">da Silva Martins</p>
+            <p class="quote">"Uma noite para celebrar sonhos, sorrisos e o início de uma nova fase."</p>
         </header>
 
+        <!-- CONTAGEM REGRESSIVA -->
+        <section class="countdown-container">
+            <h3>Contagem Regressiva</h3>
+            <div class="countdown">
+                <div class="time-box"><span id="days">00</span><p>Dias</p></div>
+                <div class="time-box"><span id="hours">00</span><p>Horas</p></div>
+                <div class="time-box"><span id="minutes">00</span><p>Min</p></div>
+                <div class="time-box"><span id="seconds">00</span><p>Seg</p></div>
+            </div>
+        </section>
+
+        <!-- DETALHES DA FESTA -->
         <section class="details">
-            <p class="party-text">Tem o prazer de convidar você e sua família para celebrar seus</p>
             <div class="age">15 Anos</div>
             
             <div class="info-block">
@@ -31,21 +55,35 @@
                 <p class="time">às 19:00h</p>
             </div>
 
-            <div class="location">
-                <h3>Local da Celebração:</h3>
+            <div class="location-box">
+                <h3>📍 Local da Celebração</h3>
                 <p>Rua Macunaíma, 50</p>
                 <p>Vaz Lobo — Rio de Janeiro — RJ</p>
+                <a href="https://maps.google.com/?q=R.+Macunaíma,+50+-+Vaz+Lobo,+Rio+de+Janeiro" class="btn btn-maps">Ver no Google Maps</a>
             </div>
         </section>
 
+        <!-- DRESS CODE -->
+        <section class="dress-code">
+            <h3>👗 Dress Code</h3>
+            <p>"Para preservar a identidade visual da festa, pedimos gentilmente que nossos convidados evitem trajes nos tons de azul e branco. Agradecemos por fazer parte desse momento tão especial."</p>
+        </section>
+
+        <!-- LISTA DE PRESENTES -->
+        <section class="gifts">
+            <h3>🎁 Lista de Presentes</h3>
+            <p>Sua presença é o nosso melhor presente! Caso queira nos agraciar, acesse nossa lista no botão abaixo:</p>
+            <a href="#" class="btn btn-gifts">Visualizar Lista</a>
+        </section>
+
+        <!-- CONFIRMAÇÃO -->
         <footer>
-            <a href="https://wa.me/5521997102024" class="btn btn-confirm">
-                <span>Confirmar Presença</span>
-            </a>
-            <a href="https://maps.google.com/?q=R.+Macunaíma,+50+-+Vaz+Lobo,+Rio+de+Janeiro" class="btn btn-maps">
-                <span>Como Chegar</span>
+            <a href="https://wa.me/5521997102024?text=Olá!+Confirmo+minha+presença+no+XV+da+Isabella+Vitória." class="btn btn-confirm">
+                💬 Confirmar Presença no WhatsApp
             </a>
         </footer>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
