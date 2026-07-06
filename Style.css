@@ -1,0 +1,1 @@
+body{margin:0;background:linear-gradient(#e7f3ff,#fff);font-family:Arial}.card{max-width:700px;margin:40px auto;padding:30px;background:#ffffffcc;border-radius:20px;text-align:center}.snow{position:fixed;inset:0;background-image:radial-gradient(#fff 2px,transparent 2px);background-size:35px 35px;animation:f 10s linear infinite}@keyframes f{to{background-position:0 400px}}
