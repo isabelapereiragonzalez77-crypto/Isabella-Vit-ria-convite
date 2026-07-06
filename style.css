@@ -11,7 +11,7 @@ body {
     overflow-x: hidden;
 }
 
-/* TELA DE ENTRADA - PORTAS DE GELO COM FLORESTA DE NEVE */
+/* TELA DE ENTRADA - PORTAS DE GELO */
 .gate-container {
     position: fixed;
     inset: 0;
@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: visibility 1.2s;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s; /* Transição muito mais suave ao sumir */
 }
 
 .gate-left, .gate-right {
@@ -27,16 +27,17 @@ body {
     top: 0;
     bottom: 0;
     width: 50%;
-    /* Nova imagem de fundo ultra-realista focada em neve/inverno */
     background: linear-gradient(rgba(130, 190, 255, 0.35), rgba(11, 27, 54, 0.9)), 
                 url('https://images.unsplash.com/photo-1485594050903-8e8ee7b071a8?q=80&w=1000') center center / cover;
     box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.4);
-    transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    /* Transição ultra suave e desacelerada (ease-in-out) para a abertura das portas */
+    transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .gate-left { left: 0; border-right: 2px solid rgba(224, 242, 254, 0.6); }
 .gate-right { right: 0; border-left: 2px solid rgba(224, 242, 254, 0.6); }
 
+/* Quando o botão é clicado, as portas deslizam suavemente */
 .gate-container.open .gate-left { transform: translateX(-100%); }
 .gate-container.open .gate-right { transform: translateX(100%); }
 
@@ -44,7 +45,7 @@ body {
     position: relative;
     z-index: 10;
     text-align: center;
-    transition: opacity 0.8s ease;
+    transition: opacity 1s ease-in-out;
 }
 
 .gate-container.open .gate-content { opacity: 0; pointer-events: none; }
@@ -145,14 +146,14 @@ h3 { margin-top: 0; color: #93c5fd; font-size: 1rem; letter-spacing: 1px; }
 .btn-confirm { background: linear-gradient(135deg, #2563eb, #1d4ed8); color: #fff; width: 100%; font-size: 1rem; padding: 15px; box-shadow: 0 4px 15px rgba(29, 78, 216, 0.4); }
 .btn:active { transform: scale(0.98); }
 
-/* FLOCOS DE NEVE REAIS CAINDO */
+/* FLOCOS DE NEVE TELA INICIAL E PRINCIPAL (Mudança de z-index para 10000) */
 .snow-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 10000; /* Agora fica por cima da tela de entrada também! */
     pointer-events: none;
     overflow: hidden;
 }
@@ -168,7 +169,6 @@ h3 { margin-top: 0; color: #93c5fd; font-size: 1rem; letter-spacing: 1px; }
     animation: fall linear infinite;
 }
 
-/* Configurações de velocidade e posições diferentes para cada floco parecer real */
 .snowflake:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
 .snowflake:nth-child(2) { left: 25%; animation-duration: 11s; animation-delay: 1s; font-size: 1.5rem; }
 .snowflake:nth-child(3) { left: 40%; animation-duration: 9s; animation-delay: 2s; }
