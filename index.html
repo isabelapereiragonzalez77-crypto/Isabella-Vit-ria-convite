@@ -11,7 +11,10 @@
 </head>
 <body>
 
-    <!-- TELA DE ENTRADA: PORTAS DE GELO -->
+    <!-- TAG DE ÁUDIO PARA A MÚSICA DE FUNDO -->
+    <audio id="background-music" src="COLE_O_LINK_DA_SUA_MUSICA_AQUI.mp3" loop></audio>
+
+    <!-- TELA DE ENTRADA: PORTAS DE GELO COM IMAGEM DE INVERNO -->
     <div id="ice-gate" class="gate-container">
         <div class="gate-left"></div>
         <div class="gate-right"></div>
@@ -22,9 +25,15 @@
         </div>
     </div>
 
-    <!-- CONTEÚDO PRINCIPAL (FICA ESCONDIDO ATRÁS DA PORTA) -->
-    <div class="snow"></div>
-    <div class="sparkles"></div>
+    <!-- CONTEÚDO PRINCIPAL (COM FLOCOS DE NEVE DE VERDADE) -->
+    <div class="snow-container">
+        <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+        <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+        <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+        <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+        <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+        <div class="snowflake">❄</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+    </div>
 
     <main class="card">
         <header>
@@ -32,7 +41,8 @@
             <div class="divider">❄️</div>
             <h1>Isabella Vitória</h1>
             <p class="tagline">da Silva Martins</p>
-            <p class="quote">"Uma noite para celebrar sonhos, sorrisos e o início de uma nova fase."</p>
+            <!-- NOVA FRASE: PASSAGEM BÍBLICA -->
+            <p class="quote">"Fala a Arão, e a seus filhos dizendo: Assim abençoareis os filhos de Israel, dizendo-lhes: ²⁴ O Senhor te abençoe e te guarde; ²⁵ O Senhor faça resplandecer o seu rosto sobre ti, e tenha misericórdia de ti; ²⁶ O Senhor sobre ti levante o seu rosto e te dê a paz. Números 6:23-26"</p>
         </header>
 
         <!-- CONTAGEM REGRESSIVA -->
@@ -59,14 +69,14 @@
                 <h3>📍 Local da Celebração</h3>
                 <p>Rua Macunaíma, 50</p>
                 <p>Vaz Lobo — Rio de Janeiro — RJ</p>
-                <a href="https://maps.google.com/?q=R.+Macunaíma,+50+-+Vaz+Lobo,+Rio+de+Janeiro" class="btn btn-maps">Ver no Google Maps</a>
+                <a href="https://maps.google.com/?q=R.+Macunaíma,+50+-+Vaz+Lobo,+Rio+de+Janeiro" class="btn btn-maps" target="_blank">Ver no Google Maps</a>
             </div>
         </section>
 
-        <!-- DRESS CODE -->
-        <section class="dress-code">
-            <h3>👗 Dress Code</h3>
-            <p>"Para preservar a identidade visual da festa, pedimos gentilmente que nossos convidados evitem trajes nos tons de azul e branco. Agradecemos por fazer parte desse momento tão especial."</p>
+        <!-- DRESS CODE ATUALIZADO (ESPORTE FINO / SEM AZUL, BRANCO E DOURADO) -->
+        <section class="dress-code gold-theme">
+            <h3>✨ Dress Code: Esporte Fino ✨</h3>
+            <p>"Para preservar a identidade visual da festa, pedimos gentilmente que nossos convidados evitem trajes nos tons de azul, branco e dourado. Agradecemos por fazer parte desse momento tão especial."</p>
         </section>
 
         <!-- LISTA DE PRESENTES -->
@@ -78,7 +88,7 @@
 
         <!-- CONFIRMAÇÃO -->
         <footer>
-            <a href="https://wa.me/5521997102024?text=Olá!+Confirmo+minha+presença+no+XV+da+Isabella+Vitória." class="btn btn-confirm">
+            <a href="https://wa.me/5521997102024?text=Olá!+Confirmo+minha+presença+no+XV+da+Isabella+Vitória." class="btn btn-confirm" target="_blank">
                 💬 Confirmar Presença no WhatsApp
             </a>
         </footer>
