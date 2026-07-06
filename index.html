@@ -77,11 +77,12 @@
             <p>"Para preservar a identidade visual da festa, pedimos gentilmente que nossos convidados evitem trajes nos tons de azul, branco e dourado. Agradecemos por fazer parte desse momento tão especial."</p>
         </section>
 
-        <!-- LISTA DE PRESENTES -->
+        <!-- LISTA DE PRESENTES INTERATIVA -->
         <section class="gifts">
             <h3>🎁 Lista de Presentes</h3>
             <p>Sua presença é o nosso melhor presente! Caso queira nos agraciar, acesse nossa lista no botão abaixo:</p>
-            <a href="#" class="btn btn-gifts">Visualizar Lista</a>
+            <!-- Alterado para abrir a janela com o clique -->
+            <button class="btn btn-gifts" onclick="toggleModal(true)">Visualizar Lista</button>
         </section>
 
         <!-- CONFIRMAÇÃO CENTRALIZADA E REESTILIZADA -->
@@ -91,6 +92,14 @@
             </a>
         </footer>
     </main>
+
+    <!-- JANELA INTERATIVA (MODAL) DA LISTA DE PRESENTES -->
+    <div id="gift-modal" class="modal-overlay" onclick="toggleModal(false)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="toggleModal(false)">&times;</button>
+            <img src="lista.png" alt="Lista de Sugestões de Presente" class="modal-img">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
