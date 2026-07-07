@@ -52,4 +52,3 @@ const countdownInterval = setInterval(function() {
         document.querySelector(".countdown-container").innerHTML = "<h3>É Hoje! ❄️</h3>";
     }
 }, 1000);
-
